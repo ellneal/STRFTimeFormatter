@@ -12,4 +12,7 @@
 
 @property (copy, nonatomic) NSString *formatString;
 
+- (NSString *)stringFromDate:(NSDate *)date;
+- (NSDate *)dateFromString:(NSString *)string;
+
 @end
