@@ -10,7 +10,8 @@
 @interface STRFTimeFormatter : NSObject
 
 
-@property (copy, nonatomic) NSString *formatString;
+- (NSString *)formatString;
+- (void)setFormatString:(NSString *)formatString;
 
 - (NSString *)stringFromDate:(NSDate *)date;
 - (NSDate *)dateFromString:(NSString *)string;
