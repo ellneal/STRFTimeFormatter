@@ -22,6 +22,9 @@
 // THE SOFTWARE.
 
 
+/**
+ *  Instances of `STRFTimeFormatter` create string representations of `NSDate` objects, and convert textual representations of dates and times into `NSDate` objects using the `strftime_l(3)` and `strptime_l(3)` functions.
+ */
 @interface STRFTimeFormatter : NSObject
 
 
