@@ -7,6 +7,7 @@
 //
 
 #import "STRFTimeFormatter.h"
+#import <xlocale.h>
 
 
 @interface STRFTimeFormatter () {
@@ -30,6 +31,35 @@
     }
     
     return self;
+}
+
+
+#pragma mark - Conversion
+
+- (NSString *)stringFromDate:(NSDate *)date {
+    
+    time_t timeInterval;
+    struct tm time;
+    char buffer[80];
+    
+    timeInterval = [date timeIntervalSince1970];
+    time = *localtime(&timeInterval);
+    
+    strftime_l(buffer, sizeof(buffer), _formatString, &time, NULL);
+    
+    return [NSString stringWithCString:buffer encoding:NSASCIIStringEncoding];
+}
+
+- (NSDate *)dateFromString:(NSString *)string {
+    
+    time_t timeInterval;
+    struct tm time;
+    
+    strptime_l([string cStringUsingEncoding:NSASCIIStringEncoding], _formatString, &time, NULL);
+    
+    timeInterval = mktime(&time);
+    
+    return [NSDate dateWithTimeIntervalSince1970:timeInterval];
 }
 
 
