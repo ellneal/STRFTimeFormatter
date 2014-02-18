@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		4925E31418B40038003015A5 /* STRFTimeFormatter Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4925E31718B40038003015A5 /* Build configuration list for PBXAggregateTarget "STRFTimeFormatter Documentation" */;
+			buildPhases = (
+				4925E31818B40042003015A5 /* Generate Documentation */,
+			);
+			dependencies = (
+			);
+			name = "STRFTimeFormatter Documentation";
+			productName = "STRFTimeFormatter Documentation";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		4925E2EF18B3E8DA003015A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4925E2EE18B3E8DA003015A5 /* Foundation.framework */; };
 		4925E2F418B3E8DA003015A5 /* STRFTimeFormatter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4925E2F318B3E8DA003015A5 /* STRFTimeFormatter.h */; };
@@ -134,9 +148,27 @@
 			projectRoot = "";
 			targets = (
 				4925E2EA18B3E8DA003015A5 /* STRFTimeFormatter */,
+				4925E31418B40038003015A5 /* STRFTimeFormatter Documentation */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4925E31818B40042003015A5 /* Generate Documentation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Documentation";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/appledoc --project-name \"${PROJECT_NAME}\" --project-company \"emdentec\" --company-id com.emdentec --output \"${PROJECT_DIR}/Documentation\" --no-create-docset --create-html --explicit-crossref --exit-threshold 6 \"${PROJECT_DIR}/${PROJECT_NAME}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4925E2E718B3E8DA003015A5 /* Sources */ = {
@@ -244,6 +276,20 @@
 			};
 			name = Release;
 		};
+		4925E31518B40038003015A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4925E31618B40038003015A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -261,6 +307,15 @@
 			buildConfigurations = (
 				4925E30F18B3E8DA003015A5 /* Debug */,
 				4925E31018B3E8DA003015A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4925E31718B40038003015A5 /* Build configuration list for PBXAggregateTarget "STRFTimeFormatter Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4925E31518B40038003015A5 /* Debug */,
+				4925E31618B40038003015A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
