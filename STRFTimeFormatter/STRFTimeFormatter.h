@@ -9,4 +9,7 @@
 
 @interface STRFTimeFormatter : NSObject
 
+
+@property (copy, nonatomic) NSString *formatString;
+
 @end

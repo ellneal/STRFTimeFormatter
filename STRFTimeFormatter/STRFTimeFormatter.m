@@ -11,4 +11,18 @@
 
 @implementation STRFTimeFormatter
 
+
+#pragma mark - Lazy Properties
+
+- (NSString *)formatString {
+    
+    if (_formatString != nil) {
+        return _formatString;
+    }
+    
+    _formatString = [@"%Y-%m-%dT%H:%M:%S%z" copy];
+    
+    return _formatString;
+}
+
 @end
