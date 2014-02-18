@@ -47,6 +47,8 @@
 		4925E2F518B3E8DA003015A5 /* STRFTimeFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STRFTimeFormatter.m; sourceTree = "<group>"; };
 		4925E2FC18B3E8DA003015A5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4925E2FF18B3E8DA003015A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4925E31918B40B72003015A5 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		4925E31A18B40B72003015A5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				4925E2F218B3E8DA003015A5 /* STRFTimeFormatter-Prefix.pch */,
+				4925E31918B40B72003015A5 /* LICENSE */,
+				4925E31A18B40B72003015A5 /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
