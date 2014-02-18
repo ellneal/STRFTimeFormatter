@@ -9,20 +9,40 @@
 #import "STRFTimeFormatter.h"
 
 
+@interface STRFTimeFormatter () {
+    const char *_formatString;
+}
+
+@end
+
+
 @implementation STRFTimeFormatter
 
 
-#pragma mark - Lazy Properties
+#pragma mark - Initialization
+
+- (id)init {
+    
+    self = [super init];
+    
+    if (self) {
+        _formatString = "%Y-%m-%dT%H:%M:%S%z";
+    }
+    
+    return self;
+}
+
+
+#pragma mark - Format String
 
 - (NSString *)formatString {
     
-    if (_formatString != nil) {
-        return _formatString;
-    }
+    return [NSString stringWithCString:_formatString encoding:NSASCIIStringEncoding];
+}
+
+- (void)setFormatString:(NSString *)formatString {
     
-    _formatString = [@"%Y-%m-%dT%H:%M:%S%z" copy];
-    
-    return _formatString;
+    _formatString = [formatString cStringUsingEncoding:NSASCIIStringEncoding];
 }
 
 @end
