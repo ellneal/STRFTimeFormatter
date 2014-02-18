@@ -36,6 +36,18 @@
 
 #pragma mark - Conversion
 
+- (NSDate *)dateFromString:(NSString *)string {
+    
+    time_t timeInterval;
+    struct tm time;
+    
+    strptime_l([string cStringUsingEncoding:NSASCIIStringEncoding], _formatString, &time, NULL);
+    
+    timeInterval = mktime(&time);
+    
+    return [NSDate dateWithTimeIntervalSince1970:timeInterval];
+}
+
 - (NSString *)stringFromDate:(NSDate *)date {
     
     time_t timeInterval;
@@ -48,18 +60,6 @@
     strftime_l(buffer, sizeof(buffer), _formatString, &time, NULL);
     
     return [NSString stringWithCString:buffer encoding:NSASCIIStringEncoding];
-}
-
-- (NSDate *)dateFromString:(NSString *)string {
-    
-    time_t timeInterval;
-    struct tm time;
-    
-    strptime_l([string cStringUsingEncoding:NSASCIIStringEncoding], _formatString, &time, NULL);
-    
-    timeInterval = mktime(&time);
-    
-    return [NSDate dateWithTimeIntervalSince1970:timeInterval];
 }
 
 
