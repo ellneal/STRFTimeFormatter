@@ -90,4 +90,15 @@
     _formatString = [formatString cStringUsingEncoding:NSASCIIStringEncoding];
 }
 
+
+#pragma mark - NSCopying
+
+- (instancetype)copyWithZone:(NSZone *)zone {
+    
+    STRFTimeFormatter *copy = [[STRFTimeFormatter allocWithZone:zone] init];
+    copy->_formatString = _formatString;
+    
+    return copy;
+}
+
 @end
