@@ -27,6 +27,7 @@
 
 @interface STRFTimeFormatter () {
     const char *_formatString;
+    BOOL _useUniversalTimeLocale;
 }
 
 @end
@@ -43,6 +44,7 @@
     
     if (self) {
         _formatString = "%Y-%m-%dT%H:%M:%S%z";
+        _useUniversalTimeLocale = NO;
     }
     
     return self;
@@ -70,7 +72,7 @@
     char buffer[80];
     
     timeInterval = [date timeIntervalSince1970];
-    time = *localtime(&timeInterval);
+    time = *([self useUniversalTimeLocale] ? gmtime(&timeInterval) : localtime(&timeInterval));
     
     strftime_l(buffer, sizeof(buffer), _formatString, &time, NULL);
     
@@ -88,6 +90,19 @@
 - (void)setFormatString:(NSString *)formatString {
     
     _formatString = [formatString cStringUsingEncoding:NSASCIIStringEncoding];
+}
+
+
+#pragma mark - Locale Option
+
+- (BOOL)useUniversalTimeLocale {
+    
+    return _useUniversalTimeLocale;
+}
+
+- (void)setUseUniversalTimeLocale:(BOOL)useUniversalTimeLocale {
+    
+    _useUniversalTimeLocale = useUniversalTimeLocale;
 }
 
 
