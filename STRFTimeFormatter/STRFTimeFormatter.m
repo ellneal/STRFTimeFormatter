@@ -90,4 +90,19 @@
     _formatString = [formatString cStringUsingEncoding:NSASCIIStringEncoding];
 }
 
+
+#pragma mark - NSCopying
+
+- (instancetype)copyWithZone:(NSZone *)zone {
+    
+    STRFTimeFormatter *copy = [[STRFTimeFormatter allocWithZone:zone] init];
+    
+    char *formatString = malloc(sizeof(_formatString));
+	strcpy(formatString, _formatString);
+	
+	copy->_formatString = formatString;
+    
+    return copy;
+}
+
 @end
