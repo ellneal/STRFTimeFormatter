@@ -25,7 +25,7 @@
 /**
  *  Instances of `STRFTimeFormatter` create string representations of `NSDate` objects, and convert textual representations of dates and times into `NSDate` objects using the `strftime_l(3)` and `strptime_l(3)` functions.
  */
-@interface STRFTimeFormatter : NSObject
+@interface STRFTimeFormatter : NSObject <NSCopying>
 
 
 ///  ------------------------
@@ -76,5 +76,23 @@
  *  @see -formatString
  */
 - (void)setFormatString:(NSString *)formatString;
+
+/**
+ *  @abstract Returns a boolean value indicating if the universal time locale is being used.
+ *
+ *  @return A boolean value indicating if the universal time locale is being used.
+ *
+ *  @see -setUseUniversalTimeLocale
+ */
+- (BOOL)useUniversalTimeLocale;
+
+/**
+ *  @abstract Sets whether the universal time locale will be used.
+ *
+ *  @param useUniversalTimeLocale A boolean value indicating if the universal time locale should be used.
+ *
+ *  @see -useUniversalTimeLocale
+ */
+- (void)setUseUniversalTimeLocale:(BOOL)useUniversalTimeLocale;
 
 @end
