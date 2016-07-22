@@ -96,7 +96,11 @@
 - (instancetype)copyWithZone:(NSZone *)zone {
     
     STRFTimeFormatter *copy = [[STRFTimeFormatter allocWithZone:zone] init];
-    copy->_formatString = _formatString;
+    
+    char *formatString = malloc(sizeof(_formatString));
+	strcpy(formatString, _formatString);
+	
+	copy->_formatString = formatString;
     
     return copy;
 }
