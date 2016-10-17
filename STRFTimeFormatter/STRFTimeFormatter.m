@@ -62,6 +62,10 @@
     
     timeInterval = mktime(&time);
     
+    if ([self useUniversalTimeLocale]) {
+        timeInterval += [[NSTimeZone defaultTimeZone] secondsFromGMT];
+    }
+    
     return [NSDate dateWithTimeIntervalSince1970:timeInterval];
 }
 
