@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9ED8F813-3824-41C2-B0C7-1AFF1EB37B34</string>
+	<key>IDESourceControlProjectName</key>
+	<string>STRFTimeFormatter</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BB88AC1D-6C50-47EE-98E1-0CB3A29999BF</key>
+		<string>ssh://github.com/ellneal/STRFTimeFormatter.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>STRFTimeFormatter.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BB88AC1D-6C50-47EE-98E1-0CB3A29999BF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/ellneal/STRFTimeFormatter.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BB88AC1D-6C50-47EE-98E1-0CB3A29999BF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BB88AC1D-6C50-47EE-98E1-0CB3A29999BF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>STRFTimeFormatter</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -24,7 +24,19 @@
 		4925E2EF18B3E8DA003015A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4925E2EE18B3E8DA003015A5 /* Foundation.framework */; };
 		4925E2F418B3E8DA003015A5 /* STRFTimeFormatter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4925E2F318B3E8DA003015A5 /* STRFTimeFormatter.h */; };
 		4925E2F618B3E8DA003015A5 /* STRFTimeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4925E2F518B3E8DA003015A5 /* STRFTimeFormatter.m */; };
+		494916151DB533D4002D398A /* STRFTimeFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 494916141DB533D4002D398A /* STRFTimeFormatterTests.m */; };
+		494916171DB533D4002D398A /* libSTRFTimeFormatter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4925E2EB18B3E8DA003015A5 /* libSTRFTimeFormatter.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		494916181DB533D4002D398A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4925E2E318B3E8DA003015A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4925E2EA18B3E8DA003015A5;
+			remoteInfo = STRFTimeFormatter;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4925E2E918B3E8DA003015A5 /* CopyFiles */ = {
@@ -49,6 +61,9 @@
 		4925E2FF18B3E8DA003015A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		4925E31918B40B72003015A5 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		4925E31A18B40B72003015A5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
+		494916121DB533D4002D398A /* STRFTimeFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STRFTimeFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		494916141DB533D4002D398A /* STRFTimeFormatterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STRFTimeFormatterTests.m; sourceTree = "<group>"; };
+		494916161DB533D4002D398A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +75,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4949160F1DB533D4002D398A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494916171DB533D4002D398A /* libSTRFTimeFormatter.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				4925E2F018B3E8DA003015A5 /* STRFTimeFormatter */,
+				494916131DB533D4002D398A /* STRFTimeFormatterTests */,
 				4925E2ED18B3E8DA003015A5 /* Frameworks */,
 				4925E2EC18B3E8DA003015A5 /* Products */,
 			);
@@ -76,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				4925E2EB18B3E8DA003015A5 /* libSTRFTimeFormatter.a */,
+				494916121DB533D4002D398A /* STRFTimeFormatterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +135,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		494916131DB533D4002D398A /* STRFTimeFormatterTests */ = {
+			isa = PBXGroup;
+			children = (
+				494916141DB533D4002D398A /* STRFTimeFormatterTests.m */,
+				494916161DB533D4002D398A /* Info.plist */,
+			);
+			path = STRFTimeFormatterTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +164,24 @@
 			productReference = 4925E2EB18B3E8DA003015A5 /* libSTRFTimeFormatter.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		494916111DB533D4002D398A /* STRFTimeFormatterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4949161C1DB533D4002D398A /* Build configuration list for PBXNativeTarget "STRFTimeFormatterTests" */;
+			buildPhases = (
+				4949160E1DB533D4002D398A /* Sources */,
+				4949160F1DB533D4002D398A /* Frameworks */,
+				494916101DB533D4002D398A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				494916191DB533D4002D398A /* PBXTargetDependency */,
+			);
+			name = STRFTimeFormatterTests;
+			productName = STRFTimeFormatterTests;
+			productReference = 494916121DB533D4002D398A /* STRFTimeFormatterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -138,6 +190,13 @@
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = emdentec;
+				TargetAttributes = {
+					494916111DB533D4002D398A = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = A38VE2799A;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 4925E2E618B3E8DA003015A5 /* Build configuration list for PBXProject "STRFTimeFormatter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -153,9 +212,20 @@
 			targets = (
 				4925E2EA18B3E8DA003015A5 /* STRFTimeFormatter */,
 				4925E31418B40038003015A5 /* STRFTimeFormatter Documentation */,
+				494916111DB533D4002D398A /* STRFTimeFormatterTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		494916101DB533D4002D398A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		4925E31818B40042003015A5 /* Generate Documentation */ = {
@@ -183,7 +253,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4949160E1DB533D4002D398A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494916151DB533D4002D398A /* STRFTimeFormatterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		494916191DB533D4002D398A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4925E2EA18B3E8DA003015A5 /* STRFTimeFormatter */;
+			targetProxy = 494916181DB533D4002D398A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4925E30C18B3E8DA003015A5 /* Debug */ = {
@@ -293,6 +379,53 @@
 			};
 			name = Release;
 		};
+		4949161A1DB533D4002D398A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = A38VE2799A;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = STRFTimeFormatterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emdentec.STRFTimeFormatterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4949161B1DB533D4002D398A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = A38VE2799A;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = STRFTimeFormatterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emdentec.STRFTimeFormatterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -322,6 +455,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4949161C1DB533D4002D398A /* Build configuration list for PBXNativeTarget "STRFTimeFormatterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4949161A1DB533D4002D398A /* Debug */,
+				4949161B1DB533D4002D398A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
