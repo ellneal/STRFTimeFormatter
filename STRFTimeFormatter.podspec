@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
 
   s.author       = { "Elliot Neal" => "elliot@emdentec.com" }
-  s.source       = { :git => "https://github.com/ellneal/STRFTimeFormatter.git", :tag => "v1.0" }
+  s.source       = { :git => "https://github.com/ellneal/STRFTimeFormatter.git", :tag => "v1.1" }
   
   s.source_files = 'STRFTimeFormatter/**/*.{h,m}'
   s.requires_arc = true

@@ -60,7 +60,12 @@
     
     strptime_l([string cStringUsingEncoding:NSASCIIStringEncoding], _formatString, &time, NULL);
     
-    timeInterval = mktime(&time);
+    if ([self useUniversalTimeLocale]) {
+        timeInterval = timegm(&time);
+    }
+    else {
+        timeInterval = mktime(&time);
+    }
     
     return [NSDate dateWithTimeIntervalSince1970:timeInterval];
 }
